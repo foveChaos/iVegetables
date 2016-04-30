@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		D7B67FCB1CD4EC8B0034AFEF /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B67FCA1CD4EC8B0034AFEF /* Reachability.m */; };
+		D7B67FCF1CD4EDC60034AFEF /* GuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B67FCE1CD4EDC60034AFEF /* GuideViewController.swift */; };
+		D7B67FD11CD4EDE90034AFEF /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B67FD01CD4EDE90034AFEF /* BaseViewController.swift */; };
 		D7CC6D311CD346DA004FB7F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CC6D301CD346DA004FB7F8 /* AppDelegate.swift */; };
 		D7CC6D361CD346DA004FB7F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7CC6D341CD346DA004FB7F8 /* Main.storyboard */; };
 		D7CC6D381CD346DA004FB7F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7CC6D371CD346DA004FB7F8 /* Assets.xcassets */; };
@@ -18,6 +20,8 @@
 		D7B67FC91CD4EC8B0034AFEF /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		D7B67FCA1CD4EC8B0034AFEF /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		D7B67FCC1CD4ECB10034AFEF /* iVegetables-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "iVegetables-Bridging-Header.h"; sourceTree = "<group>"; };
+		D7B67FCE1CD4EDC60034AFEF /* GuideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuideViewController.swift; sourceTree = "<group>"; };
+		D7B67FD01CD4EDE90034AFEF /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		D7CC6D2D1CD346DA004FB7F8 /* iVegetables.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iVegetables.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7CC6D301CD346DA004FB7F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7CC6D351CD346DA004FB7F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -40,6 +44,7 @@
 		D7B67FBF1CD4EC320034AFEF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D7B67FCE1CD4EDC60034AFEF /* GuideViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -56,6 +61,7 @@
 		D7B67FC11CD4EC320034AFEF /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				D7B67FD01CD4EDE90034AFEF /* BaseViewController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -197,7 +203,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7B67FCB1CD4EC8B0034AFEF /* Reachability.m in Sources */,
+				D7B67FD11CD4EDE90034AFEF /* BaseViewController.swift in Sources */,
 				D7CC6D311CD346DA004FB7F8 /* AppDelegate.swift in Sources */,
+				D7B67FCF1CD4EDC60034AFEF /* GuideViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
