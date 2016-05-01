@@ -11,4 +11,21 @@ import UIKit
 
 class BaseViewController: UIViewController {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        loadUserView()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        updateUserView()
+    }
+    
+    func loadUserView() {
+        
+    }
+    
+    func updateUserView() {
+        
+    }
 }

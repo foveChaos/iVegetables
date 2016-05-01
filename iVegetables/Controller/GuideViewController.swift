@@ -11,4 +11,22 @@ import UIKit
 
 class GuideViewController: BaseViewController {
     
+    override func loadUserView() {
+        
+    }
+    
+}
+
+extension GuideViewController {
+    
+    private func reachability() -> Bool {
+        let reach = Reachability.reachabilityForInternetConnection()
+        let status = reach.currentReachabilityStatus()
+        if !(status == NetworkStatus.ReachableViaWiFi ||
+            status == NetworkStatus.ReachableViaWiFi) {
+            return false
+        }
+        return true
+    }
+    
 }

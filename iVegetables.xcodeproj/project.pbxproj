@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D7B4EB1D1CD5A370008D62BB /* ConstantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B4EB1C1CD5A370008D62BB /* ConstantModel.swift */; };
+		D7B4EB201CD5A458008D62BB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7B4EB1F1CD5A458008D62BB /* SystemConfiguration.framework */; };
 		D7B67FCB1CD4EC8B0034AFEF /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B67FCA1CD4EC8B0034AFEF /* Reachability.m */; };
 		D7B67FCF1CD4EDC60034AFEF /* GuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B67FCE1CD4EDC60034AFEF /* GuideViewController.swift */; };
 		D7B67FD11CD4EDE90034AFEF /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B67FD01CD4EDE90034AFEF /* BaseViewController.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D7B4EB1C1CD5A370008D62BB /* ConstantModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstantModel.swift; sourceTree = "<group>"; };
+		D7B4EB1F1CD5A458008D62BB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		D7B67FC91CD4EC8B0034AFEF /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		D7B67FCA1CD4EC8B0034AFEF /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		D7B67FCC1CD4ECB10034AFEF /* iVegetables-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "iVegetables-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -35,12 +39,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7B4EB201CD5A458008D62BB /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D7B4EB1E1CD5A43A008D62BB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D7B4EB1F1CD5A458008D62BB /* SystemConfiguration.framework */,
+			);
+			name = Frameworks;
+			path = Library;
+			sourceTree = "<group>";
+		};
 		D7B67FBF1CD4EC320034AFEF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +92,7 @@
 		D7B67FC31CD4EC320034AFEF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D7B4EB1C1CD5A370008D62BB /* ConstantModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -126,6 +141,7 @@
 				D7B67FC41CD4EC320034AFEF /* View */,
 				D7B67FBF1CD4EC320034AFEF /* Controller */,
 				D7B67FCD1CD4ECF30034AFEF /* Others */,
+				D7B4EB1E1CD5A43A008D62BB /* Frameworks */,
 			);
 			path = iVegetables;
 			sourceTree = "<group>";
@@ -202,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7B4EB1D1CD5A370008D62BB /* ConstantModel.swift in Sources */,
 				D7B67FCB1CD4EC8B0034AFEF /* Reachability.m in Sources */,
 				D7B67FD11CD4EDE90034AFEF /* BaseViewController.swift in Sources */,
 				D7CC6D311CD346DA004FB7F8 /* AppDelegate.swift in Sources */,
