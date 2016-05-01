@@ -43,12 +43,8 @@ class GuideViewController: BaseViewController, HomeViewDelegate {
         guideViewDelegate?.netAvailable()
     }
     
-    func hostStartLoad() {
-        messageLabel.text = "开始加载主页..."
-    }
-    
     func hostFinishLoad() {
-        messageLabel.text = "主页加载完毕！"
+        messageLabel.text = "欢迎使用！"
     }
 }
 

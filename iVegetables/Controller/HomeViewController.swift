@@ -22,10 +22,6 @@ class HomeViewController: BaseViewController, GuideViewDelegate {
         viewController.guideViewDelegate = self
     }
     
-    func webViewDidStartLoad(webView: UIWebView) {
-        homeViewDelegate?.hostStartLoad()
-    }
-    
     func webViewDidFinishLoad(webView: UIWebView) {
         homeViewDelegate?.hostFinishLoad()
         self.performSelector(#selector(removeGuide), withObject: nil, afterDelay: 1)
@@ -46,11 +42,13 @@ extension HomeViewController {
         if let url = NSURL(string: Host) {
             let request = NSURLRequest(URL: url)
             webView.loadRequest(request)
+            webView.scrollView.bounces = false
         }
     }
     
     func removeGuide() {
-        UIView.animateWithDuration(1) { 
+        UIView.animateWithDuration(2) {
+            self.view.alpha = 1
             self.guideContainer.alpha = 0
             self.guideContainer.removeFromSuperview()
         }

@@ -119,7 +119,9 @@
                             <constraint firstItem="TnQ-19-FRz" firstAttribute="top" secondItem="b6d-iz-fop" secondAttribute="bottom" id="3vs-nl-sb5"/>
                             <constraint firstItem="b6d-iz-fop" firstAttribute="leading" secondItem="2so-Y1-2C5" secondAttribute="leading" id="BFT-xS-CoX"/>
                             <constraint firstItem="TnQ-19-FRz" firstAttribute="top" secondItem="4EM-0S-XMM" secondAttribute="bottom" id="Dfl-4g-SVd"/>
-                            <constraint firstItem="b6d-iz-fop" firstAttribute="top" secondItem="2so-Y1-2C5" secondAttribute="top" id="E70-Tc-Sjd"/>
+                            <constraint firstItem="b6d-iz-fop" firstAttribute="top" secondItem="2so-Y1-2C5" secondAttribute="top" id="E70-Tc-Sjd">
+                                <variation key="heightClass=regular-widthClass=compact" constant="20"/>
+                            </constraint>
                             <constraint firstItem="4EM-0S-XMM" firstAttribute="top" secondItem="2so-Y1-2C5" secondAttribute="top" id="X84-qV-1OF"/>
                             <constraint firstAttribute="trailing" secondItem="4EM-0S-XMM" secondAttribute="trailing" id="koS-tm-Acv"/>
                             <constraint firstAttribute="trailing" secondItem="b6d-iz-fop" secondAttribute="trailing" id="mc7-gk-1Rv"/>
