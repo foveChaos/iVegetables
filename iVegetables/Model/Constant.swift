@@ -9,8 +9,7 @@
 import Foundation
 
 /// 主机地址
-let Host = "www.baidu.com"
+let Host = "http://www.csdn.net"
 
 /// 提示信息
 let I001 = "当前网络无法连接！"
-

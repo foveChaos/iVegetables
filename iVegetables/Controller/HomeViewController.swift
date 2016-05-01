@@ -9,8 +9,6 @@
 import Foundation
 import UIKit
 
-
-
 class HomeViewController: BaseViewController, GuideViewDelegate {
     
     @IBOutlet private var guideContainer: UIView!
