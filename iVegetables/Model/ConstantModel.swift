@@ -8,4 +8,5 @@
 
 import Foundation
 
-let hostName = "https://www.baidu.com"
+let Host = "https://www.baidu.com"
+let I001 = "当前网络无法连接！"

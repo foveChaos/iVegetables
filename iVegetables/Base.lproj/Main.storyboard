@@ -16,17 +16,50 @@
                     <view key="view" contentMode="scaleToFill" id="7If-I1-2j9">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Yfe-tR-5Mf">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Yfe-tR-5Mf" secondAttribute="trailing" id="97Q-it-uzC"/>
+                            <constraint firstItem="Yfe-tR-5Mf" firstAttribute="leading" secondItem="7If-I1-2j9" secondAttribute="leading" id="p0A-2N-Tp1"/>
+                            <constraint firstItem="KGi-tF-kaJ" firstAttribute="top" secondItem="Yfe-tR-5Mf" secondAttribute="bottom" id="s5C-YW-u5y"/>
+                            <constraint firstItem="Yfe-tR-5Mf" firstAttribute="top" secondItem="Ixt-MZ-rPd" secondAttribute="bottom" id="tzk-M0-eDa"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Yfe-tR-5Mf"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="97Q-it-uzC"/>
+                                <exclude reference="p0A-2N-Tp1"/>
+                                <exclude reference="tzk-M0-eDa"/>
+                                <exclude reference="s5C-YW-u5y"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Yfe-tR-5Mf"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="97Q-it-uzC"/>
+                                <include reference="p0A-2N-Tp1"/>
+                                <include reference="tzk-M0-eDa"/>
+                                <include reference="s5C-YW-u5y"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wdk-Uz-cmG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="127" y="397"/>
+            <point key="canvasLocation" x="177" y="1116.75"/>
         </scene>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="Fzs-uN-j4h">
             <objects>
-                <viewController id="40i-Bo-iT3" sceneMemberID="viewController">
+                <viewController id="40i-Bo-iT3" customClass="HomeViewController" customModule="iVegetables" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="53g-53-25A"/>
                         <viewControllerLayoutGuide type="bottom" id="TnQ-19-FRz"/>
@@ -37,42 +70,69 @@
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b6d-iz-fop">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="40i-Bo-iT3" id="Dqe-sE-cXm"/>
+                                </connections>
                             </webView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4EM-0S-XMM">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <connections>
+                                    <segue destination="ape-YH-OKi" kind="embed" id="idO-UB-xNm"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="TnQ-19-FRz" firstAttribute="top" secondItem="b6d-iz-fop" secondAttribute="bottom" id="3vs-nl-sb5"/>
                             <constraint firstItem="b6d-iz-fop" firstAttribute="leading" secondItem="2so-Y1-2C5" secondAttribute="leading" id="BFT-xS-CoX"/>
+                            <constraint firstItem="TnQ-19-FRz" firstAttribute="top" secondItem="4EM-0S-XMM" secondAttribute="bottom" id="Dfl-4g-SVd"/>
                             <constraint firstItem="b6d-iz-fop" firstAttribute="top" secondItem="2so-Y1-2C5" secondAttribute="top" id="E70-Tc-Sjd"/>
+                            <constraint firstItem="4EM-0S-XMM" firstAttribute="top" secondItem="2so-Y1-2C5" secondAttribute="top" id="X84-qV-1OF"/>
+                            <constraint firstAttribute="trailing" secondItem="4EM-0S-XMM" secondAttribute="trailing" id="koS-tm-Acv"/>
                             <constraint firstAttribute="trailing" secondItem="b6d-iz-fop" secondAttribute="trailing" id="mc7-gk-1Rv"/>
+                            <constraint firstItem="4EM-0S-XMM" firstAttribute="leading" secondItem="2so-Y1-2C5" secondAttribute="leading" id="vYd-Iy-JPa"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="b6d-iz-fop"/>
+                                <exclude reference="4EM-0S-XMM"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="X84-qV-1OF"/>
+                                <exclude reference="koS-tm-Acv"/>
+                                <exclude reference="vYd-Iy-JPa"/>
                                 <exclude reference="BFT-xS-CoX"/>
                                 <exclude reference="E70-Tc-Sjd"/>
                                 <exclude reference="mc7-gk-1Rv"/>
                                 <exclude reference="3vs-nl-sb5"/>
+                                <exclude reference="Dfl-4g-SVd"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="b6d-iz-fop"/>
+                                <include reference="4EM-0S-XMM"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="X84-qV-1OF"/>
+                                <include reference="koS-tm-Acv"/>
+                                <include reference="vYd-Iy-JPa"/>
                                 <include reference="BFT-xS-CoX"/>
                                 <include reference="E70-Tc-Sjd"/>
                                 <include reference="mc7-gk-1Rv"/>
                                 <include reference="3vs-nl-sb5"/>
+                                <include reference="Dfl-4g-SVd"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="guideContainer" destination="4EM-0S-XMM" id="ibD-BK-oEh"/>
+                        <outlet property="webView" destination="b6d-iz-fop" id="NMW-H9-dqy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RXi-46-uHb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1048.5" y="396.75"/>
+            <point key="canvasLocation" x="177" y="389.25"/>
         </scene>
     </scenes>
 </document>
