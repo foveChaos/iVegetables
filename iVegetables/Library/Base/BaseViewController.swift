@@ -21,6 +21,8 @@ class BaseViewController: UIViewController {
         updateUserView()
     }
     
+    
+    
     func loadUserView() {
         
     }

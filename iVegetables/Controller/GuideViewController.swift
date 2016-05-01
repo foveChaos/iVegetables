@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-private struct AboutAlert {
+struct AboutAlert {
     var title: String?
     var message: String?
     var style: UIAlertControllerStyle {
@@ -18,11 +18,19 @@ private struct AboutAlert {
     
 }
 
-private typealias VoidBlock = () -> Void
+typealias VoidBlock = () -> Void
 
-class GuideViewController: BaseViewController {
-        
+class GuideViewController: BaseViewController, HomeViewDelegate {
+    
+    @IBOutlet weak var messageLabel: UILabel!
+    
+    var guideViewDelegate: GuideViewDelegate?
+    
     override func updateUserView() {
+        
+        let viewController = self.parentViewController as! HomeViewController
+        viewController.homeViewDelegate = self
+        
         guard netAvailable() else {
             var alert = AboutAlert()
             alert.message = I001
@@ -31,12 +39,22 @@ class GuideViewController: BaseViewController {
             })
             return
         }
+        
+        guideViewDelegate?.netAvailable()
+    }
+    
+    func hostStartLoad() {
+        messageLabel.text = "开始加载主页..."
+    }
+    
+    func hostFinishLoad() {
+        messageLabel.text = "主页加载完毕！"
     }
 }
 
 extension GuideViewController {
     
-    private func netAvailable() -> Bool {
+    func netAvailable() -> Bool {
         let reach = Reachability.reachabilityForInternetConnection()
         let status = reach.currentReachabilityStatus()
         if !(status == NetworkStatus.ReachableViaWiFi ||
@@ -46,7 +64,7 @@ extension GuideViewController {
         return true
     }
     
-    private func alertMake(property: AboutAlert, block:VoidBlock) {
+    func alertMake(property: AboutAlert, block:VoidBlock) {
         let alertController = UIAlertController(title: property.title, message: property.message, preferredStyle: property.style)
         let okAction = UIAlertAction(title: "好的", style: UIAlertActionStyle.Default) { (okAction) in
             block()

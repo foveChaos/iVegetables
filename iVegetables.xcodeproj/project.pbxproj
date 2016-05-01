@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D7B4EB1D1CD5A370008D62BB /* ConstantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B4EB1C1CD5A370008D62BB /* ConstantModel.swift */; };
+		D7B4EB1D1CD5A370008D62BB /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B4EB1C1CD5A370008D62BB /* Constant.swift */; };
 		D7B4EB201CD5A458008D62BB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7B4EB1F1CD5A458008D62BB /* SystemConfiguration.framework */; };
 		D7B4EB221CD5AA28008D62BB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B4EB211CD5AA28008D62BB /* HomeViewController.swift */; };
+		D7B4EB261CD5C38C008D62BB /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B4EB251CD5C38C008D62BB /* Protocol.swift */; };
 		D7B67FCB1CD4EC8B0034AFEF /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B67FCA1CD4EC8B0034AFEF /* Reachability.m */; };
 		D7B67FCF1CD4EDC60034AFEF /* GuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B67FCE1CD4EDC60034AFEF /* GuideViewController.swift */; };
 		D7B67FD11CD4EDE90034AFEF /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B67FD01CD4EDE90034AFEF /* BaseViewController.swift */; };
@@ -20,9 +21,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D7B4EB1C1CD5A370008D62BB /* ConstantModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstantModel.swift; sourceTree = "<group>"; };
+		D7B4EB1C1CD5A370008D62BB /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		D7B4EB1F1CD5A458008D62BB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		D7B4EB211CD5AA28008D62BB /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		D7B4EB251CD5C38C008D62BB /* Protocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
 		D7B67FC91CD4EC8B0034AFEF /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		D7B67FCA1CD4EC8B0034AFEF /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		D7B67FCC1CD4ECB10034AFEF /* iVegetables-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "iVegetables-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -95,7 +97,7 @@
 		D7B67FC31CD4EC320034AFEF /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D7B4EB1C1CD5A370008D62BB /* ConstantModel.swift */,
+				D7B4EB1C1CD5A370008D62BB /* Constant.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -103,6 +105,7 @@
 		D7B67FC41CD4EC320034AFEF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D7B4EB251CD5C38C008D62BB /* Protocol.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -221,10 +224,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7B4EB1D1CD5A370008D62BB /* ConstantModel.swift in Sources */,
+				D7B4EB1D1CD5A370008D62BB /* Constant.swift in Sources */,
 				D7B67FCB1CD4EC8B0034AFEF /* Reachability.m in Sources */,
 				D7B67FD11CD4EDE90034AFEF /* BaseViewController.swift in Sources */,
 				D7CC6D311CD346DA004FB7F8 /* AppDelegate.swift in Sources */,
+				D7B4EB261CD5C38C008D62BB /* Protocol.swift in Sources */,
 				D7B67FCF1CD4EDC60034AFEF /* GuideViewController.swift in Sources */,
 				D7B4EB221CD5AA28008D62BB /* HomeViewController.swift in Sources */,
 			);

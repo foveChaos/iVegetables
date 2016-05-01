@@ -20,10 +20,34 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Yfe-tR-5Mf">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="正在检测网络状态..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LCe-81-KEO">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Sly-RR-QVO"/>
+                                    <constraint firstAttribute="width" constant="130" id="jc7-w5-YK0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Sly-RR-QVO"/>
+                                        <exclude reference="jc7-w5-YK0"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Sly-RR-QVO"/>
+                                        <include reference="jc7-w5-YK0"/>
+                                    </mask>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Yfe-tR-5Mf" secondAttribute="trailing" id="97Q-it-uzC"/>
+                            <constraint firstItem="KGi-tF-kaJ" firstAttribute="top" secondItem="LCe-81-KEO" secondAttribute="bottom" constant="89" id="YPk-nN-Bg7"/>
+                            <constraint firstItem="LCe-81-KEO" firstAttribute="centerX" secondItem="7If-I1-2j9" secondAttribute="centerX" id="eWT-GH-6hU"/>
                             <constraint firstItem="Yfe-tR-5Mf" firstAttribute="leading" secondItem="7If-I1-2j9" secondAttribute="leading" id="p0A-2N-Tp1"/>
                             <constraint firstItem="KGi-tF-kaJ" firstAttribute="top" secondItem="Yfe-tR-5Mf" secondAttribute="bottom" id="s5C-YW-u5y"/>
                             <constraint firstItem="Yfe-tR-5Mf" firstAttribute="top" secondItem="Ixt-MZ-rPd" secondAttribute="bottom" id="tzk-M0-eDa"/>
@@ -31,26 +55,35 @@
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="Yfe-tR-5Mf"/>
+                                <exclude reference="LCe-81-KEO"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="97Q-it-uzC"/>
                                 <exclude reference="p0A-2N-Tp1"/>
                                 <exclude reference="tzk-M0-eDa"/>
+                                <exclude reference="eWT-GH-6hU"/>
+                                <exclude reference="YPk-nN-Bg7"/>
                                 <exclude reference="s5C-YW-u5y"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="Yfe-tR-5Mf"/>
+                                <include reference="LCe-81-KEO"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="97Q-it-uzC"/>
                                 <include reference="p0A-2N-Tp1"/>
                                 <include reference="tzk-M0-eDa"/>
+                                <include reference="eWT-GH-6hU"/>
+                                <include reference="YPk-nN-Bg7"/>
                                 <include reference="s5C-YW-u5y"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="messageLabel" destination="LCe-81-KEO" id="tp2-wz-Rvg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wdk-Uz-cmG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
