@@ -13,6 +13,5 @@ protocol GuideViewDelegate {
 }
 
 protocol HomeViewDelegate {
-    func hostStartLoad()
     func hostFinishLoad()
 }
