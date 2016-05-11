@@ -18,7 +18,7 @@ class IntroduceViewController: BaseViewController {
     let identifier = "IntroduceCell"
     var introduceDelegate: IntroduceViewDelegate?
 
-    func useBegan() {
+    func useBegan(sender:UIButton) {
         introduceDelegate?.startUsing()
     }
     
@@ -28,7 +28,7 @@ class IntroduceViewController: BaseViewController {
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(identifier, forIndexPath: indexPath)
-//        cell.imageWithPage(indexPath.item)
+        cell.imageWithPage(indexPath.item)
         return cell
     }
     
@@ -62,8 +62,8 @@ extension UICollectionViewCell {
             let button = UIButton.init(type: UIButtonType.Custom)
             button.frame = buttonRect
             button.setTitle("开始使用", forState: UIControlState.Normal)
-            button.addTarget(self, action: #selector(IntroduceViewController.useBegan), forControlEvents: UIControlEvents.TouchUpInside)
-            addSubview(button)
+//            button.addTarget(self, action: #selector(IntroduceViewController.useBegan(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+//            addSubview(button)
         }
     }
 }
