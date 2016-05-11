@@ -220,10 +220,14 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TWf-Qt-f41">
                                                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="82" id="O7b-VN-7OX"/>
-                                                        <constraint firstAttribute="height" constant="30" id="i41-2V-Dft"/>
+                                                        <constraint firstAttribute="width" constant="82" id="O7b-VN-7OX">
+                                                            <variation key="heightClass=regular-widthClass=compact" constant="243"/>
+                                                        </constraint>
+                                                        <constraint firstAttribute="height" constant="30" id="i41-2V-Dft">
+                                                            <variation key="heightClass=regular-widthClass=compact" constant="57"/>
+                                                        </constraint>
                                                     </constraints>
-                                                    <state key="normal" title="Button"/>
+                                                    <state key="normal" image="btn_gogogo"/>
                                                     <variation key="default">
                                                         <mask key="constraints">
                                                             <exclude reference="O7b-VN-7OX"/>
@@ -245,7 +249,9 @@
                                         </view>
                                         <constraints>
                                             <constraint firstItem="o3l-nv-1cC" firstAttribute="width" secondItem="Q5f-pc-2ob" secondAttribute="width" id="Khv-Uw-dKX"/>
-                                            <constraint firstAttribute="bottom" secondItem="TWf-Qt-f41" secondAttribute="bottom" constant="58" id="d9I-4D-dEt"/>
+                                            <constraint firstAttribute="bottom" secondItem="TWf-Qt-f41" secondAttribute="bottom" constant="58" id="d9I-4D-dEt">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="96"/>
+                                            </constraint>
                                             <constraint firstItem="TWf-Qt-f41" firstAttribute="centerX" secondItem="Q5f-pc-2ob" secondAttribute="centerX" id="dxe-pq-edg"/>
                                             <constraint firstItem="o3l-nv-1cC" firstAttribute="height" secondItem="Q5f-pc-2ob" secondAttribute="height" id="fuV-rG-izR"/>
                                             <constraint firstItem="o3l-nv-1cC" firstAttribute="centerX" secondItem="Q5f-pc-2ob" secondAttribute="centerX" id="qUU-9s-U08"/>
@@ -331,6 +337,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="btn_gogogo" width="243" height="57"/>
         <image name="img_launch" width="360" height="640"/>
     </resources>
 </document>

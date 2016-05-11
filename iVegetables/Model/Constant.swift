@@ -21,6 +21,6 @@ let I001 = "当前网络无法连接！"
 let numberOfPages = 3
 
 /// 轮播图片
-let FirstPage = "img_launch"
-let SecondPage = "img_launch"
-let LastPage = "img_launch"
+let FirstPage = "img_1"
+let SecondPage = "img_2"
+let LastPage = "img_3"
