@@ -18,7 +18,7 @@ class IntroduceViewController: BaseViewController {
     let identifier = "IntroduceCell"
     var introduceDelegate: IntroduceViewDelegate?
 
-    func useBegan(sender:UIButton) {
+    @IBAction func useBegan() {
         introduceDelegate?.startUsing()
     }
     
@@ -27,8 +27,8 @@ class IntroduceViewController: BaseViewController {
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(identifier, forIndexPath: indexPath)
-        cell.imageWithPage(indexPath.item)
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(identifier, forIndexPath: indexPath) as! IntroduceCell
+        cell.viewForPage(indexPath.item)
         return cell
     }
     
@@ -37,33 +37,27 @@ class IntroduceViewController: BaseViewController {
     }
 }
 
-extension UICollectionViewCell {
-    func imageWithPage(pageNumber: Int) {
+class IntroduceCell: UICollectionViewCell {
+    
+    @IBOutlet private weak var imageView: UIImageView!
+    @IBOutlet private weak var button: UIButton!
+    
+    func viewForPage(pageNumber: Int) {
         var buttonHidden: Bool
         var imageName: String
         switch pageNumber {
         case 0:
-            buttonHidden = false
+            buttonHidden = true
             imageName = FirstPage
         case 1:
-            buttonHidden = false
+            buttonHidden = true
             imageName = SecondPage
         default:
-            buttonHidden = true
+            buttonHidden = false
             imageName = LastPage
         }
-        
-        let imageView = UIImageView.init(frame: bounds)
+
         imageView.image = UIImage(named: imageName)
-        addSubview(imageView)
-        
-        if !buttonHidden {
-            let buttonRect = CGRectMake(CGRectGetWidth(bounds)/4, CGRectGetMaxY(bounds) - 60, CGRectGetWidth(bounds)/2, 40)
-            let button = UIButton.init(type: UIButtonType.Custom)
-            button.frame = buttonRect
-            button.setTitle("开始使用", forState: UIControlState.Normal)
-//            button.addTarget(self, action: #selector(IntroduceViewController.useBegan(_:)), forControlEvents: UIControlEvents.TouchUpInside)
-//            addSubview(button)
-        }
+        button.hidden = buttonHidden
     }
 }

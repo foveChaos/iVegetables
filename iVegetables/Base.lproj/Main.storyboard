@@ -207,14 +207,82 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="IntroduceCell" id="Q5f-pc-2ob">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="IntroduceCell" id="Q5f-pc-2ob" customClass="IntroduceCell" customModule="iVegetables" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="400" height="800"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="o3l-nv-1cC">
+                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TWf-Qt-f41">
+                                                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="82" id="O7b-VN-7OX"/>
+                                                        <constraint firstAttribute="height" constant="30" id="i41-2V-Dft"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button"/>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="O7b-VN-7OX"/>
+                                                            <exclude reference="i41-2V-Dft"/>
+                                                        </mask>
+                                                    </variation>
+                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                        <mask key="constraints">
+                                                            <include reference="O7b-VN-7OX"/>
+                                                            <include reference="i41-2V-Dft"/>
+                                                        </mask>
+                                                    </variation>
+                                                    <connections>
+                                                        <action selector="useBegan" destination="M1V-qH-GyT" eventType="touchUpInside" id="Ocx-CP-tSZ"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <constraints>
+                                            <constraint firstItem="o3l-nv-1cC" firstAttribute="width" secondItem="Q5f-pc-2ob" secondAttribute="width" id="Khv-Uw-dKX"/>
+                                            <constraint firstAttribute="bottom" secondItem="TWf-Qt-f41" secondAttribute="bottom" constant="58" id="d9I-4D-dEt"/>
+                                            <constraint firstItem="TWf-Qt-f41" firstAttribute="centerX" secondItem="Q5f-pc-2ob" secondAttribute="centerX" id="dxe-pq-edg"/>
+                                            <constraint firstItem="o3l-nv-1cC" firstAttribute="height" secondItem="Q5f-pc-2ob" secondAttribute="height" id="fuV-rG-izR"/>
+                                            <constraint firstItem="o3l-nv-1cC" firstAttribute="centerX" secondItem="Q5f-pc-2ob" secondAttribute="centerX" id="qUU-9s-U08"/>
+                                            <constraint firstItem="o3l-nv-1cC" firstAttribute="centerY" secondItem="Q5f-pc-2ob" secondAttribute="centerY" id="uxB-kS-BT6"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="subviews">
+                                                <exclude reference="o3l-nv-1cC"/>
+                                                <exclude reference="TWf-Qt-f41"/>
+                                            </mask>
+                                            <mask key="constraints">
+                                                <exclude reference="Khv-Uw-dKX"/>
+                                                <exclude reference="fuV-rG-izR"/>
+                                                <exclude reference="qUU-9s-U08"/>
+                                                <exclude reference="uxB-kS-BT6"/>
+                                                <exclude reference="d9I-4D-dEt"/>
+                                                <exclude reference="dxe-pq-edg"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="subviews">
+                                                <include reference="o3l-nv-1cC"/>
+                                                <include reference="TWf-Qt-f41"/>
+                                            </mask>
+                                            <mask key="constraints">
+                                                <include reference="Khv-Uw-dKX"/>
+                                                <include reference="fuV-rG-izR"/>
+                                                <include reference="qUU-9s-U08"/>
+                                                <include reference="uxB-kS-BT6"/>
+                                                <include reference="d9I-4D-dEt"/>
+                                                <include reference="dxe-pq-edg"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <outlet property="button" destination="TWf-Qt-f41" id="edS-Xv-7mo"/>
+                                            <outlet property="imageView" destination="o3l-nv-1cC" id="Lfd-EM-muK"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
