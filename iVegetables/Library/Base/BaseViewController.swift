@@ -21,13 +21,15 @@ class BaseViewController: UIViewController {
         updateUserView()
     }
     
-    
-    
     func loadUserView() {
         
     }
     
     func updateUserView() {
         
+    }
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.LightContent
     }
 }

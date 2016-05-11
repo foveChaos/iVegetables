@@ -14,7 +14,7 @@
                         <viewControllerLayoutGuide type="bottom" id="KGi-tF-kaJ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="7If-I1-2j9">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Yfe-tR-5Mf">
@@ -58,12 +58,12 @@
                                 <exclude reference="LCe-81-KEO"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="YPk-nN-Bg7"/>
+                                <exclude reference="s5C-YW-u5y"/>
+                                <exclude reference="eWT-GH-6hU"/>
                                 <exclude reference="97Q-it-uzC"/>
                                 <exclude reference="p0A-2N-Tp1"/>
                                 <exclude reference="tzk-M0-eDa"/>
-                                <exclude reference="eWT-GH-6hU"/>
-                                <exclude reference="YPk-nN-Bg7"/>
-                                <exclude reference="s5C-YW-u5y"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -72,12 +72,12 @@
                                 <include reference="LCe-81-KEO"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="YPk-nN-Bg7"/>
+                                <include reference="s5C-YW-u5y"/>
+                                <include reference="eWT-GH-6hU"/>
                                 <include reference="97Q-it-uzC"/>
                                 <include reference="p0A-2N-Tp1"/>
                                 <include reference="tzk-M0-eDa"/>
-                                <include reference="eWT-GH-6hU"/>
-                                <include reference="YPk-nN-Bg7"/>
-                                <include reference="s5C-YW-u5y"/>
                             </mask>
                         </variation>
                     </view>
@@ -98,6 +98,7 @@
                         <viewControllerLayoutGuide type="bottom" id="TnQ-19-FRz"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="2so-Y1-2C5">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b6d-iz-fop">
@@ -119,12 +120,10 @@
                             <constraint firstItem="TnQ-19-FRz" firstAttribute="top" secondItem="b6d-iz-fop" secondAttribute="bottom" id="3vs-nl-sb5"/>
                             <constraint firstItem="b6d-iz-fop" firstAttribute="leading" secondItem="2so-Y1-2C5" secondAttribute="leading" id="BFT-xS-CoX"/>
                             <constraint firstItem="TnQ-19-FRz" firstAttribute="top" secondItem="4EM-0S-XMM" secondAttribute="bottom" id="Dfl-4g-SVd"/>
-                            <constraint firstItem="b6d-iz-fop" firstAttribute="top" secondItem="2so-Y1-2C5" secondAttribute="top" id="E70-Tc-Sjd">
-                                <variation key="heightClass=regular-widthClass=compact" constant="20"/>
-                            </constraint>
                             <constraint firstItem="4EM-0S-XMM" firstAttribute="top" secondItem="2so-Y1-2C5" secondAttribute="top" id="X84-qV-1OF"/>
                             <constraint firstAttribute="trailing" secondItem="4EM-0S-XMM" secondAttribute="trailing" id="koS-tm-Acv"/>
                             <constraint firstAttribute="trailing" secondItem="b6d-iz-fop" secondAttribute="trailing" id="mc7-gk-1Rv"/>
+                            <constraint firstItem="b6d-iz-fop" firstAttribute="top" secondItem="2so-Y1-2C5" secondAttribute="top" id="tbv-0P-mVq"/>
                             <constraint firstItem="4EM-0S-XMM" firstAttribute="leading" secondItem="2so-Y1-2C5" secondAttribute="leading" id="vYd-Iy-JPa"/>
                         </constraints>
                         <variation key="default">
@@ -137,8 +136,8 @@
                                 <exclude reference="koS-tm-Acv"/>
                                 <exclude reference="vYd-Iy-JPa"/>
                                 <exclude reference="BFT-xS-CoX"/>
-                                <exclude reference="E70-Tc-Sjd"/>
                                 <exclude reference="mc7-gk-1Rv"/>
+                                <exclude reference="tbv-0P-mVq"/>
                                 <exclude reference="3vs-nl-sb5"/>
                                 <exclude reference="Dfl-4g-SVd"/>
                             </mask>
@@ -153,8 +152,8 @@
                                 <include reference="koS-tm-Acv"/>
                                 <include reference="vYd-Iy-JPa"/>
                                 <include reference="BFT-xS-CoX"/>
-                                <include reference="E70-Tc-Sjd"/>
                                 <include reference="mc7-gk-1Rv"/>
+                                <include reference="tbv-0P-mVq"/>
                                 <include reference="3vs-nl-sb5"/>
                                 <include reference="Dfl-4g-SVd"/>
                             </mask>

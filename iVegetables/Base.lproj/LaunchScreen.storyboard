@@ -33,10 +33,10 @@
                                 <exclude reference="tf5-WN-70T"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="YGv-o7-p5v"/>
                                 <exclude reference="KyZ-wx-8Q4"/>
                                 <exclude reference="TIk-Jz-5PS"/>
                                 <exclude reference="Vwd-CR-hg2"/>
-                                <exclude reference="YGv-o7-p5v"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -44,10 +44,10 @@
                                 <include reference="tf5-WN-70T"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="YGv-o7-p5v"/>
                                 <include reference="KyZ-wx-8Q4"/>
                                 <include reference="TIk-Jz-5PS"/>
                                 <include reference="Vwd-CR-hg2"/>
-                                <include reference="YGv-o7-p5v"/>
                             </mask>
                         </variation>
                     </view>
