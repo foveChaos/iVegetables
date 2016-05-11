@@ -9,19 +9,34 @@
 import Foundation
 import UIKit
 
-class HomeViewController: BaseViewController, GuideViewDelegate {
+class HomeViewController: BaseViewController, GuideViewDelegate, IntroduceViewDelegate {
     
     @IBOutlet private var guideContainer: UIView!
+    @IBOutlet private var introduceContainer: UIView!
     @IBOutlet private var webView: UIWebView!
     
     var homeViewDelegate: HomeViewDelegate?
     
-    override func updateUserView() {
+    override func loadUserView() {
         
-        let viewController = self.childViewControllers.first as! GuideViewController
-        viewController.guideViewDelegate = self
+        let userDefault = NSUserDefaults.standardUserDefaults()
+        let flag = userDefault.boolForKey(HadUseThisApp)
+        if flag {
+            introduceContainer.alpha = 0
+        } else {
+//            userDefault.setBool(true, forKey: HadUseThisApp)
+        }
     }
     
+    override func updateUserView() {
+        
+        let introduceViewController = self.childViewControllers.first as! IntroduceViewController
+        introduceViewController.introduceDelegate = self
+        
+        let guideViewController = self.childViewControllers.last as! GuideViewController
+        guideViewController.guideViewDelegate = self
+    }
+
     func webViewDidFinishLoad(webView: UIWebView) {
         homeViewDelegate?.hostFinishLoad()
         self.performSelector(#selector(removeGuide), withObject: nil, afterDelay: 1)
@@ -33,6 +48,10 @@ class HomeViewController: BaseViewController, GuideViewDelegate {
     
     func netAvailable() {
         connect()
+    }
+    
+    func startUsing() {
+        removeIntroduce()
     }
 }
 
@@ -54,4 +73,11 @@ extension HomeViewController {
         }
     }
     
+    func removeIntroduce() {
+        UIView.animateWithDuration(2) {
+            self.view.alpha = 1
+            self.introduceContainer.alpha = 0
+            self.introduceContainer.removeFromSuperview()
+        }
+    }
 }

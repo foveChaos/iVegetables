@@ -22,7 +22,7 @@ typealias VoidBlock = () -> Void
 
 class GuideViewController: BaseViewController, HomeViewDelegate {
     
-    @IBOutlet weak var messageLabel: UILabel!
+    @IBOutlet private weak var messageLabel: UILabel!
     
     var guideViewDelegate: GuideViewDelegate?
     

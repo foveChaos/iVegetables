@@ -15,3 +15,7 @@ protocol GuideViewDelegate {
 protocol HomeViewDelegate {
     func hostFinishLoad()
 }
+
+protocol IntroduceViewDelegate {
+    func startUsing()
+}
