@@ -24,7 +24,7 @@ class HomeViewController: BaseViewController, GuideViewDelegate, IntroduceViewDe
         if flag {
             introduceContainer.alpha = 0
         } else {
-//            userDefault.setBool(true, forKey: HadUseThisApp)
+            userDefault.setBool(true, forKey: HadUseThisApp)
         }
     }
     
