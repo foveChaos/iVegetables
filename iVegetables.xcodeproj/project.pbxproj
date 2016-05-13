@@ -14,6 +14,7 @@
 		D7B67FCB1CD4EC8B0034AFEF /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B67FCA1CD4EC8B0034AFEF /* Reachability.m */; };
 		D7B67FCF1CD4EDC60034AFEF /* GuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B67FCE1CD4EDC60034AFEF /* GuideViewController.swift */; };
 		D7B67FD11CD4EDE90034AFEF /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B67FD01CD4EDE90034AFEF /* BaseViewController.swift */; };
+		D7CA32DE1CE59D9B002A4F7F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7CA32DD1CE59D9B002A4F7F /* CoreLocation.framework */; };
 		D7CC6D311CD346DA004FB7F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CC6D301CD346DA004FB7F8 /* AppDelegate.swift */; };
 		D7CC6D361CD346DA004FB7F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7CC6D341CD346DA004FB7F8 /* Main.storyboard */; };
 		D7CC6D381CD346DA004FB7F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7CC6D371CD346DA004FB7F8 /* Assets.xcassets */; };
@@ -31,6 +32,7 @@
 		D7B67FCC1CD4ECB10034AFEF /* iVegetables-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "iVegetables-Bridging-Header.h"; sourceTree = "<group>"; };
 		D7B67FCE1CD4EDC60034AFEF /* GuideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuideViewController.swift; sourceTree = "<group>"; };
 		D7B67FD01CD4EDE90034AFEF /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		D7CA32DD1CE59D9B002A4F7F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		D7CC6D2D1CD346DA004FB7F8 /* iVegetables.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iVegetables.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7CC6D301CD346DA004FB7F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7CC6D351CD346DA004FB7F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -45,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7CA32DE1CE59D9B002A4F7F /* CoreLocation.framework in Frameworks */,
 				D7B4EB201CD5A458008D62BB /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -55,6 +58,7 @@
 		D7B4EB1E1CD5A43A008D62BB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D7CA32DD1CE59D9B002A4F7F /* CoreLocation.framework */,
 				D7B4EB1F1CD5A458008D62BB /* SystemConfiguration.framework */,
 			);
 			name = Frameworks;
