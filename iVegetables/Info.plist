@@ -43,5 +43,7 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<true/>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>一米鲜蔬需要通过定位功能获取您当前所在区域</string>
 </dict>
 </plist>
