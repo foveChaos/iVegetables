@@ -9,7 +9,7 @@
 import Foundation
 
 /// 主机地址
-let Host = "http://demogame.jnunu.com"
+let Host = "http://www.yimixs.com"
 
 /// 使用标示
 let HadUseThisApp = "HadUseThisApp"
